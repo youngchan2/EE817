@@ -291,8 +291,8 @@ void freevm(pde_t *pgdir)
   if (pgdir == 0)
     panic("freevm: no pgdir");
   deallocuvm(pgdir, KERNBASE, 0);
-  // for (i = 0; i < NPDENTRIES; i++)
-  for (i = 0; i < PDX(KERNBASE); i++)
+  // for (i = 0; i < PDX(KERNBASE); i++)
+  for (i = 0; i < NPDENTRIES; i++)
   {
     if (pgdir[i] & PTE_P)
     {
@@ -325,17 +325,17 @@ copyuvm(pde_t *pgdir, uint sz)
   uint pa, i, flags;
   char *mem;
 
-  // if ((d = setupkvm()) == 0)
-  //   return 0;
-  /* ------------------------------------------------ */
-  if ((d = (pde_t *)kalloc()) == 0)
+  if ((d = setupkvm()) == 0)
     return 0;
-  memset(d, 0, PGSIZE);
+  /* ------------------------------------------------ */
+  // if ((d = (pde_t *)kalloc()) == 0)
+  //   return 0;
+  // memset(d, 0, PGSIZE);
 
-  for (i = PDX(KERNBASE); i < NPDENTRIES; i++)
-  {
-    d[i] = pgdir[i];
-  }
+  // for (i = PDX(KERNBASE); i < NPDENTRIES; i++)
+  // {
+  //   d[i] = pgdir[i];
+  // }
   /* ------------------------------------------------ */
   for (i = 0; i < sz; i += PGSIZE)
   {

@@ -14,3 +14,7 @@ kernel
 kernelmemfs
 mkfs
 .gdbinit
+img/
+log/
+test.log
+hw3.sh
