@@ -8,7 +8,6 @@
     int $T_SYSCALL; \
     ret
 
-SYSCALL(testlock)
 SYSCALL(fork)
 SYSCALL(exit)
 SYSCALL(wait)
@@ -30,3 +29,6 @@ SYSCALL(getpid)
 SYSCALL(sbrk)
 SYSCALL(sleep)
 SYSCALL(uptime)
+SYSCALL(testlock)
+SYSCALL(sematest)
+SYSCALL(rwsematest)

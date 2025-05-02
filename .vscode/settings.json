@@ -2,6 +2,7 @@
     "files.associations": {
         "types.h": "c",
         "spinlock.h": "c",
-        "proc.h": "c"
+        "proc.h": "c",
+        "sleeplock.h": "c"
     }
 }

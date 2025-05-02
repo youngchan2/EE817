@@ -13,7 +13,8 @@ int main()
         pid = fork();
         if (pid)
         {
-            printf(1, "process %d is created\n", i);
+            ;
+            // printf(1, "process %d is created\n", i);
             sleep(100);
         }
         else
@@ -30,7 +31,8 @@ int main()
     else
     {
         testlock();
-        printf(1, "%d have acquired lock\n", i);
+        // printf(1, "%d have acquired lock\n", i);
+        printf(1, "%d ", i);
         testlock();
     }
 
