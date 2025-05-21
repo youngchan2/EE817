@@ -102,6 +102,7 @@ extern int sys_uptime(void);
 extern int sys_testlock(void);
 extern int sys_sematest(void);
 extern int sys_rwsematest(void);
+extern int sys_uthread_create(void);
 
 static int (*syscalls[])(void) = {
     [SYS_fork] sys_fork,
@@ -128,6 +129,7 @@ static int (*syscalls[])(void) = {
     [SYS_testlock] sys_testlock,
     [SYS_sematest] sys_sematest,
     [SYS_rwsematest] sys_rwsematest,
+    [SYS_uthread_create] sys_uthread_create,
 };
 
 void syscall(void)

@@ -3,6 +3,7 @@
         "types.h": "c",
         "spinlock.h": "c",
         "proc.h": "c",
-        "sleeplock.h": "c"
+        "sleeplock.h": "c",
+        "user.h": "c"
     }
 }

@@ -61,6 +61,8 @@ struct proc
   struct inode *cwd;          // Current directory
   char name[16];              // Process name (debugging)
   struct proc *next;
+  uint scheduler;
+  int pending;
 };
 
 // Process memory is laid out contiguously, low addresses first:

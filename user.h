@@ -5,6 +5,7 @@ struct rtcdate;
 int testlock(void);
 int sematest(int);
 int rwsematest(int);
+int uthread_create(void *);
 int fork(void);
 int exit(void) __attribute__((noreturn));
 int wait(void);
